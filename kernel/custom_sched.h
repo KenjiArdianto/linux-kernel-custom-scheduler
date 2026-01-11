@@ -13,7 +13,7 @@
 
 #define RR_QUANTUM 2
 
-SYSCALL_DEFINE4(fcfs_schedule,
+SYSCALL_DEFINE4(custom_sched,
     struct custom_sched_process __user *, procs,
     int, n,
     int, policy,

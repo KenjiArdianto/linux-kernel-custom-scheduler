@@ -1,5 +1,5 @@
-#ifndef _UAPI_LINUX_FCFS_SCHED_H
-#define _UAPI_LINUX_FCFS_SCHED_H
+#ifndef _UAPI_LINUX_CUSTOM_SCHED_H
+#define _UAPI_LINUX_CUSTOM_SCHED_H
 
 #include <linux/types.h>
 
