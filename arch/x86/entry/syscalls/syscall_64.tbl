@@ -440,4 +440,4 @@
 # This is the end of the legacy x32 range.  Numbers 548 and above are
 # not special and are not to be used for x32-specific syscalls.
 
-550 common fcfs_sched_fcfs __x64_sys_sched_fcfs
+550 common custom_sched sys_custom_sched

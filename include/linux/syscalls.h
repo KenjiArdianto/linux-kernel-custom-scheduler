@@ -93,7 +93,7 @@ struct file_attr;
 #include <linux/key.h>
 #include <linux/personality.h>
 #include <trace/syscall.h>
-#include <uapi/linux/sched_fcfs.h>
+#include <uapi/linux/custom_sched.h>
 
 #ifdef CONFIG_ARCH_HAS_SYSCALL_WRAPPER
 /*
@@ -1333,9 +1333,10 @@ int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 
 
 // Custom Scheduler Syscalls
-asmlinkage long sys_sched_fcfs(
-    struct fcfs_process __user *procs,
+asmlinkage long sys_custom_sched(
+    struct custom_sched_process __user *procs,
     int n,
-    struct fcfs_result __user *result);
-
+	int policy,
+    struct custom_sched_result __user *result);
+	
 #endif

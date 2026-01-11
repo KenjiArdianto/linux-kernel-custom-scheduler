@@ -3,7 +3,7 @@
 # Makefile for the linux kernel.
 #
 
-obj-y += sched_fcfs.o
+obj-y += custom_sched.o
 
 obj-y     = fork.o exec_domain.o panic.o \
 	    cpu.o exit.o softirq.o resource.o \
