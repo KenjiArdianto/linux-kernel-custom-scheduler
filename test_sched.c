@@ -8,7 +8,7 @@
 #include <linux/custom_sched.h>
 
 #ifndef __NR_custom_sched
-#define __NR_custom_sched 550
+#define __NR_custom_sched 470
 #endif
 
 #define SCHED_FCFS 0 

@@ -1105,6 +1105,9 @@ asmlinkage long sys_epoll_wait(int epfd, struct epoll_event __user *events,
 				int maxevents, int timeout);
 asmlinkage long sys_ustat(unsigned dev, struct ustat __user *ubuf);
 asmlinkage long sys_vfork(void);
+// Custom Scheduler Syscalls
+asmlinkage long sys_custom_sched(struct custom_sched_process __user *procs, int n, int policy, struct custom_sched_result __user *result);
+	
 asmlinkage long sys_recv(int, void __user *, size_t, unsigned);
 asmlinkage long sys_send(int, void __user *, size_t, unsigned);
 asmlinkage long sys_oldumount(char __user *name);
@@ -1331,12 +1334,4 @@ int __sys_getsockopt(int fd, int level, int optname, char __user *optval,
 int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 		int optlen);
 
-
-// Custom Scheduler Syscalls
-asmlinkage long sys_custom_sched(
-    struct custom_sched_process __user *procs,
-    int n,
-	int policy,
-    struct custom_sched_result __user *result);
-	
 #endif

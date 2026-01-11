@@ -394,6 +394,7 @@
 467	common	open_tree_attr		sys_open_tree_attr
 468	common	file_getattr		sys_file_getattr
 469	common	file_setattr		sys_file_setattr
+470 common custom_sched sys_custom_sched
 
 #
 # Due to a historical design error, certain syscalls are numbered differently
@@ -439,5 +440,3 @@
 547	x32	pwritev2		compat_sys_pwritev64v2
 # This is the end of the legacy x32 range.  Numbers 548 and above are
 # not special and are not to be used for x32-specific syscalls.
-
-550 common custom_sched sys_custom_sched
