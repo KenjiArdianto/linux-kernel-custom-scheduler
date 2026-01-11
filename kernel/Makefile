@@ -3,6 +3,8 @@
 # Makefile for the linux kernel.
 #
 
+obj-y += sched_fcfs.o
+
 obj-y     = fork.o exec_domain.o panic.o \
 	    cpu.o exit.o softirq.o resource.o \
 	    sysctl.o capability.o ptrace.o user.o \
@@ -206,5 +208,3 @@ $(obj)/kheaders.md5: $(obj)/kheaders-srclist FORCE
 	$(call filechk,kheaders_md5sum)
 
 clean-files := kheaders.md5 kheaders-srclist kheaders-objlist
-
-obj-y += sched_fcfs.o
