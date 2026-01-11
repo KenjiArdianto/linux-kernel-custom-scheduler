@@ -1329,4 +1329,12 @@ int __sys_getsockopt(int fd, int level, int optname, char __user *optval,
 		int __user *optlen);
 int __sys_setsockopt(int fd, int level, int optname, char __user *optval,
 		int optlen);
+
+
+// Custom Scheduler Syscalls
+asmlinkage long sys_sched_fcfs(
+    struct fcfs_process __user *procs,
+    int n,
+    struct fcfs_result __user *result);
+
 #endif
